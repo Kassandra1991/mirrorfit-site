@@ -136,7 +136,22 @@
     }
     .hero-cta:hover { background: var(--terracotta); transform: translateY(-1px); }
 
-    /* ── SECTION LAYOUT ── */
+    /* ── APP STORE BADGE ── */
+    .appstore-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    .appstore-badge {
+      display: inline-block;
+      transition: opacity .2s, transform .2s;
+    }
+    .appstore-badge:hover { opacity: 0.85; transform: translateY(-2px); }
+    .appstore-badge img { height: 54px; width: auto; display: block; }
+
+
     .section {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -481,7 +496,12 @@
       <p class="hero-eyebrow">MirrorVibe App</p>
       <h1 class="hero-title">Daily face<br/><em>wellness.</em><br/>No filters —<br/>just you.</h1>
       <p class="hero-subtitle">Short guided routines, face awareness, and habit-building — in one daily app.</p>
-      <a href="#early" class="hero-cta">Get early access</a>
+      <div class="appstore-wrap">
+        <a href="https://apps.apple.com/gb/app/mirrorvibe/id6769147257" target="_blank" rel="noopener" class="appstore-badge">
+          <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" />
+        </a>
+        <a href="#early" class="hero-cta">Get Early Access</a>
+      </div>
     </div>
   </section>
 
@@ -571,9 +591,16 @@
   <!-- SECTION 5: EARLY ACCESS -->
   <section class="early-access" id="early">
     <div class="early-access-inner reveal">
-      <p class="early-access-tag">Join the Waitlist</p>
-      <h2 class="early-access-title">Want a discount &amp;<br/>help shape the <em>app?</em></h2>
-      <p class="early-access-body">We're building MirrorVibe with our earliest users. Drop your email — get early access, an exclusive discount, and a direct line to influence what we build next.</p>
+      <p class="early-access-tag">Early Access</p>
+      <h2 class="early-access-title">Be the first to shape<br/><em>what MirrorVibe becomes.</em></h2>
+      <p class="early-access-body">Join our early access programme and get exclusive perks — before anyone else.</p>
+      <ul style="list-style:none;padding:0;margin:0 0 2rem;text-align:left;max-width:420px;">
+        <li style="font-size:0.9rem;color:rgba(253,250,246,0.75);padding:0.45rem 0;border-bottom:1px solid rgba(253,250,246,0.1);">✦ &nbsp;TestFlight access to new features before public release</li>
+        <li style="font-size:0.9rem;color:rgba(253,250,246,0.75);padding:0.45rem 0;border-bottom:1px solid rgba(253,250,246,0.1);">✦ &nbsp;Advanced stats &amp; analytics — free while in testing (will be paid)</li>
+        <li style="font-size:0.9rem;color:rgba(253,250,246,0.75);padding:0.45rem 0;border-bottom:1px solid rgba(253,250,246,0.1);">✦ &nbsp;AI coaching &amp; personalised tips — free while in testing (will be paid)</li>
+        <li style="font-size:0.9rem;color:rgba(253,250,246,0.75);padding:0.45rem 0;border-bottom:1px solid rgba(253,250,246,0.1);">✦ &nbsp;Full marathon programmes with premium exercises — free while in testing</li>
+        <li style="font-size:0.9rem;color:rgba(253,250,246,0.75);padding:0.45rem 0;">✦ &nbsp;No paywalls between exercises — ever, during testing</li>
+      </ul>
       <div class="early-access-form" id="waitlist-form-wrap">
         <input type="email" id="waitlist-email" placeholder="your@email.com" autocomplete="email" />
         <button onclick="submitWaitlist()">Join now</button>
